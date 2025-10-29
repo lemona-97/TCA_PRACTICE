@@ -10,13 +10,13 @@ import ComposableArchitecture
 
 @main
 struct TCAApp: App {
-    var body: some Scene {
-        WindowGroup {
-            FeatureView(
-               store: Store(initialState: Feature.State(), reducer: {
-                  Feature()
-               })
-            )
-        }
-    }
+   var body: some Scene {
+      WindowGroup {
+         FeatureView(
+            store: Store(initialState: Feature.State(), reducer: {
+               Feature()
+            })
+         )
+      }
+   }
 }

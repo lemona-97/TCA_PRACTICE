@@ -28,17 +28,17 @@ struct FeatureView: View {
             let url = URL(string: urlString) {
             Text("\(url)")
             AsyncImage(url: url) { phase in
-                switch phase {
-                case .empty:
-                    ProgressView()
-                case .success(let image):
-                    image.resizable().scaledToFit()
-                      .clipShape(Circle())
-                case .failure:
-                    Image(systemName: "photo")
-                @unknown default:
-                    EmptyView()
-                }
+               switch phase {
+               case .empty:
+                  ProgressView()
+               case .success(let image):
+                  image.resizable().scaledToFit()
+                     .clipShape(Circle())
+               case .failure:
+                  Image(systemName: "photo")
+               @unknown default:
+                  EmptyView()
+               }
             }
          }
       }
